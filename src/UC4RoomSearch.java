@@ -6,12 +6,12 @@ import java.util.Map;
  * Version: 4.0
  */
 
-// Inventory Class
-class RoomInventory {
+// ✅ Renamed Inventory (no conflict)
+class RoomInventoryUC4 {
 
     private HashMap<String, Integer> inventory;
 
-    public RoomInventory() {
+    public RoomInventoryUC4() {
         inventory = new HashMap<>();
 
         inventory.put("Single Room", 5);
@@ -24,7 +24,7 @@ class RoomInventory {
     }
 }
 
-// ✅ Renamed class (NO conflict)
+// ✅ Renamed Room (no conflict)
 class RoomUC4 {
 
     String type;
@@ -45,7 +45,7 @@ class RoomUC4 {
 // Search Service
 class RoomSearchService {
 
-    public void search(RoomInventory inventory) {
+    public void search(RoomInventoryUC4 inventory) {
 
         Map<String, Integer> data = inventory.getInventory();
 
@@ -81,7 +81,7 @@ public class UC4RoomSearch {
 
     public static void main(String[] args) {
 
-        RoomInventory inventory = new RoomInventory();
+        RoomInventoryUC4 inventory = new RoomInventoryUC4();
         RoomSearchService service = new RoomSearchService();
 
         service.search(inventory);
